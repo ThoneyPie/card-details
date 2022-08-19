@@ -1,0 +1,286 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    max-width: 1440px;
+    font-family: 'Space Grotesk', sans-serif;
+    display: grid;
+    font-size: 18px;
+    font-weight: 500;
+    height: 100vh;
+    display: grid;
+    grid-template-areas: 
+    'column1 column2 column2 column2'
+    'column1 column2 column2 column2'
+    'column1 column2 column2 column2'
+    ;  
+   grid-template-columns: 1fr 3fr;
+}
+
+aside, main{
+    
+    color: #fff;
+    padding: 10px;
+}
+
+aside{
+    grid-area: column1;
+    background-image: url(/interactive-card-details-form-main/images/bg-main-desktop.png);
+    border-right: 2px solid rgb(117, 29, 117);
+
+}
+
+main{
+    grid-area: column2;
+    background-color: hsl(0, 0%, 100%);
+}
+
+
+.aside-container{
+margin-top: 100px ;
+margin-bottom: 100px;
+    }
+
+#card_front{  
+    padding-top:10px ;   
+        position: absolute;
+        padding-left: 20px;              
+        padding-bottom: 30px;
+        height: 300px;
+    
+    }
+
+    #card-logo{
+        z-index: 1;
+    }
+
+.card-width{
+    width: 300px;
+}
+
+
+#card_back{
+    position:absolute;
+        padding-left: 200px;
+       padding-top: 180px;
+       margin-top: 30px;
+        height: 200px;
+        width: 300px;
+    }
+
+.form-container{
+    position: absolute;
+    align-self: center;
+    margin-left: 400px;
+    margin-right: 50px;
+    margin-top: 130px;
+    color: black;
+}
+
+.card_details{
+    font-size: 10px;
+}
+
+#center-text{
+    position: absolute;
+    top:110px;
+    left: 80px;
+  transform: translate(-15%, -50%);
+  letter-spacing: 2px;
+  font-size: 18px;
+}
+
+#card-logo{
+    height: 40ox;
+    width: 40px;
+    position: absolute;
+    transform: translate(-210px, -120px);
+}
+
+#bottom-left-text{
+    position: absolute;
+    transform: translate(10px, -30px);
+}
+
+#back-cvc{
+    position:absolute;
+    transform: translate(210px, -100px);
+}
+
+
+
+#bottom-right-text{
+    position: absolute;
+    transform: translate(230px, -30px);
+}
+
+input.sucess {
+   border-color: #1ad063;
+}
+
+input.error {
+    border-color: #334f8c;
+ }
+
+
+input[type='text']  {
+    width: 80%;
+    padding: 6px;
+    border-radius: 4px ;
+    
+    margin-top: 6px;
+
+}
+
+button[type='submit']{
+    padding: 8px;
+    border-radius: 4px ;
+    width: 63%;
+    margin-top: 6px;
+    margin-left: 8px;
+    background-color: hsl(278, 68%, 11%);
+    color:#fff;
+    letter-spacing: 1px;
+
+
+}
+
+
+
+
+div.card_date{
+    display: flex;
+    flex-direction: row;
+    align-items: center;   
+    width: 100%;
+    
+}
+span{
+    margin-left: 100px;
+}
+
+.submit{
+    margin-top: 20px;
+}
+#CVC, #cardyear{
+    margin-left: 10px;
+    padding-left: 40px;
+    padding-bottom: 10px;
+}
+
+.form_input{
+    margin: 8px;
+    display:inline-block;
+    
+}
+
+button:hover{
+    background-color: rgb(133, 91, 180);
+    cursor:grabbing;
+}
+
+/*small{
+    visibility: hidden;
+}*/
+
+/* media queries */
+
+@media  (max-width:800px) {
+    body{
+        max-width: 1440px;
+        font-family: 'Space Grotesk', sans-serif;
+        display: grid;
+        font-size: 18px;
+        font-weight: 500;
+        height: 100vh;
+        display: grid;
+        grid-template-areas: 
+        'row row'
+        'row1 row1 '
+        'row1 row1'
+        
+        ;  
+       grid-template-columns: 1fr 3fr;
+           
+    }
+    aside{
+        grid-area: row;
+        background-image: url(/interactive-card-details-form-main/images/bg-main-mobile.png);
+        background-size:cover;
+        background-repeat: repeat-x;
+        border-bottom: 2px solid rgb(117, 29, 117);
+        margin-bottom: 100px;
+        
+    
+    }
+    aside, main{
+    
+        color: #fff;
+        padding: 10px;
+    }
+    main{
+        grid-area: row1;
+        background-color: hsl(0, 0%, 100%);
+        width: 400px;
+        max-width: 100%;
+        
+    }
+    .aside-container{
+        margin-top: 10px ;
+        margin-bottom: 10px;
+        width: 400px;
+        max-width: 100%;        
+    }
+
+
+            #card_front{  
+                z-index: 1;
+                padding-top:160px ;   
+                    position: absolute;
+                    padding-left: 20px;              
+                    padding-bottom: 30px;
+                    height: 300px;
+                
+                }
+                #card_back{ /* come back to this guy */
+                    position:absolute;
+                        padding-left: 50px;
+                       padding-top: 50px;
+                       margin-top: 10px;
+                        
+                        width: 300px;
+                    }
+                    #center-text{
+                        position: absolute;
+                        top:110px;
+                        left: 80px;
+                      transform: translate(-15%, 550%);
+                      letter-spacing: 2px;
+                      font-size: 18px;
+                    }
+                    button[type = submit]{
+                        width: 80%;
+                    }
+
+                    .form-container{
+                        position: absolute;
+                        
+                        margin-left: 20px;
+                        margin-right: 20px;
+                        margin-top: 50px;
+                        padding-top: 20px;
+                        color: black;
+                        display: grid;
+                        grid-area: row1;
+                        height: 100vh;
+                        display: block;
+                        align-items: center;
+                        
+                    }
+
+
+}
